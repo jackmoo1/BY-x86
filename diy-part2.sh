@@ -21,10 +21,11 @@ svn co https://github.com/QiuSimons/openwrt-packages/branches/main/mos-chinadns 
 svn co https://github.com/QiuSimons/openwrt-packages/branches/main/luci-app-moschinadns package/new/luci-app-moschinadns
 
 # Mosdns
-svn co https://github.com/immortalwrt/packages/trunk/net/mosdns feeds/packages/net/mosdns
-ln -sf ../../../feeds/packages/net/mosdns ./package/feeds/packages/mosdns
-sed -i '/config.yaml/d' feeds/packages/net/mosdns/Makefile
-sed -i '/mosdns-init-openwrt/d' feeds/packages/net/mosdns/Makefile
+#svn co https://github.com/immortalwrt/packages/trunk/net/mosdns feeds/packages/net/mosdns
+#ln -sf ../../../feeds/packages/net/mosdns ./package/feeds/packages/mosdns
+#sed -i '/config.yaml/d' feeds/packages/net/mosdns/Makefile
+#sed -i '/mosdns-init-openwrt/d' feeds/packages/net/mosdns/Makefile
+svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns package/new/mosdns
 sed -i 's,1.8.7,2.0.0-alpha2,g' feeds/packages/net/mosdns/Makefile
 sed -i 's,a9bbbe768288fbe19073502ffbbd1b692f395eb08833b6e784b400b13490d325,skip,g' feeds/packages/net/mosdns/Makefile
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns package/new/luci-app-mosdns
